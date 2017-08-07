@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerStates : MonoBehaviour {
 
+    /// <summary>
+    /// Jetpack stuff
+    /// </summary>
     [SerializeField]
     private float fuelInJetpack;
 
@@ -18,7 +21,26 @@ public class PlayerStates : MonoBehaviour {
             guiScript.UpdateFuel(jetpackFilledPercent);
         }
     }
+
     public float FuelInJetpackMax { get; set; }
+
+
+    /// <summary>
+    /// Inventory stuff
+    /// </summary>
+    [SerializeField]
+    private GameObject itemInHand;
+    public GameObject ItemInHand
+    {
+        get { return itemInHand; }
+        set
+        {
+
+            guiScript.UpdateHand(itemInHand);
+        }
+    }
+
+    
 
     // Locks
     public bool JumpRestricted { get; set; }

@@ -37,7 +37,7 @@ public class GUI : MonoBehaviour {
         print("Fuel:" + fuel);
         fuelBar.sizeDelta = new Vector2(fuel, 16f);
     }
-    public void UpdateHand()
+    public void UpdateHand(GameObject itemInHand)
     {
 
     }

@@ -81,6 +81,10 @@
     <Compile Include="Assets\Scripts\Controller2D\RaycastController.cs" />
     <Compile Include="Assets\Scripts\GUI\GUI.cs" />
     <Compile Include="Assets\Scripts\Objects\Consumables\Fuel.cs" />
+    <Compile Include="Assets\Scripts\Objects\Hotspots\HotspotHandler.cs" />
+    <Compile Include="Assets\Scripts\Objects\Items\ButtonPrompts.cs" />
+    <Compile Include="Assets\Scripts\Objects\Items\PickableItem.cs" />
+    <Compile Include="Assets\Scripts\Player\Inventory.cs" />
     <Compile Include="Assets\Scripts\Player\Jetpack.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
