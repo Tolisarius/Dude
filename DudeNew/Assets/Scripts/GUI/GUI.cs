@@ -7,6 +7,7 @@ public class GUI : MonoBehaviour {
     public GameObject guiCharge;
     public GameObject guiLife;
     public GameObject guiKey;
+    public GameObject hand;
 
     GameObject fuelBarFill;
     RectTransform fuelBar;
@@ -19,6 +20,8 @@ public class GUI : MonoBehaviour {
         fuelBarFill = guiCharge.transform.FindChild("fuelBarFill").gameObject;
         fuelBar = fuelBarFill.GetComponent<RectTransform>();
         fuelBarFilledSize = fuelBar.sizeDelta.x;
+
+        hand= gameObject.transform.FindChild("hand").gameObject;
         //UpdateFuel(0.5f);
     }
 
@@ -39,7 +42,10 @@ public class GUI : MonoBehaviour {
     }
     public void UpdateHand(GameObject itemInHand)
     {
-
+        PickableItem pickableItem = itemInHand.GetComponent<PickableItem>();
+        Sprite itemToInventoryPic = pickableItem.itemInventorySprite;
+        Image handImage= hand.GetComponent<Image>();
+        handImage.sprite = itemToInventoryPic;
     }
 
 	

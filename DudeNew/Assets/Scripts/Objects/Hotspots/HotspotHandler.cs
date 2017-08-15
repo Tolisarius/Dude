@@ -24,7 +24,7 @@ public class HotspotHandler : MonoBehaviour {
         if (readInput && (Input.GetKeyDown(KeyCode.E)|| Input.GetButtonDown("Fire3")))
         {
             
-            client.SendMessageUpwards("ItemPick", gameObject);
+            client.SendMessageUpwards("HotSpotItemHandler", gameObject);
         }
 	}
 

@@ -35,8 +35,14 @@ public class PlayerStates : MonoBehaviour {
         get { return itemInHand; }
         set
         {
-
-            guiScript.UpdateHand(itemInHand);
+            itemInHand = value;                      
+            if (itemInHand !=null)
+            {
+                print("neco mam!");
+                itemInHand.SetActive(false);
+                itemInHand.transform.SetParent(gameObject.transform);               //hang it to a Player but invisible   
+                guiScript.UpdateHand(itemInHand);
+            }
         }
     }
 
